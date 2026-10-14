@@ -1,0 +1,17 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=.\\SQLEXPRESS;Database=IRouteCommerce;User Id=TU_USUARIO;Password=TU_PASSWORD;TrustServerCertificate=True;"
+  },
+  "Jwt": {
+    "Issuer": "IRouteCommerce.Api",
+    "Audience": "IRouteCommerce.Client",
+    "Key": "CAMBIA-ESTA-CLAVE-SECRETA-POR-UNA-LARGA-DE-MAS-DE-32-CARACTERES",
+    "ExpiryMinutes": 120
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  }
+}

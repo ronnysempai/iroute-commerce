@@ -1,0 +1,41 @@
+<div class="login-page">
+  <form class="login-card" (ngSubmit)="submit()">
+    <div class="login-brand">
+      <span class="logo">iRoute</span>
+      <span class="brand-sub">Comercio</span>
+    </div>
+    <h1>Iniciar sesión</h1>
+    <p class="hint">Accede para cargar y procesar archivos de comercio.</p>
+
+    <label class="field">
+      <span>Usuario</span>
+      <input
+        type="text"
+        name="username"
+        [(ngModel)]="username"
+        autocomplete="username"
+        placeholder="admin" />
+    </label>
+
+    <label class="field">
+      <span>Contraseña</span>
+      <div class="password-row">
+        <input
+          [type]="showPassword ? 'text' : 'password'"
+          name="password"
+          [(ngModel)]="password"
+          autocomplete="current-password"
+          placeholder="••••••••" />
+        <button type="button" class="btn-ghost" (click)="showPassword = !showPassword">
+          {{ showPassword ? 'Ocultar' : 'Ver' }}
+        </button>
+      </div>
+    </label>
+
+    <p class="error" *ngIf="error">{{ error }}</p>
+
+    <button type="submit" class="btn-primary" [disabled]="loading">
+      {{ loading ? 'Ingresando…' : 'Ingresar' }}
+    </button>
+  </form>
+</div>

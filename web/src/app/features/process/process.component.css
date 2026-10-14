@@ -1,0 +1,132 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.page-head h1 {
+  margin: 0 0 4px;
+  font-size: 1.4rem;
+  color: #0f172a;
+}
+
+.page-head p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.92rem;
+  max-width: 70ch;
+}
+
+.page-head code {
+  background: #e2e8f0;
+  padding: 1px 6px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  color: #1e293b;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
+}
+
+.form-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.field input {
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #0f172a;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18);
+}
+
+.btn-primary {
+  padding: 11px 22px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.btn-primary:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.error {
+  margin: 16px 0 0;
+  padding: 10px 12px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+  border-radius: 10px;
+  font-size: 0.87rem;
+}
+
+.result {
+  margin-top: 18px;
+  padding: 18px 20px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.result-count {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.result-count .count {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1d4ed8;
+  line-height: 1;
+}
+
+.result-count .count-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1e40af;
+}
+
+.result-msg {
+  margin: 0;
+  color: #334155;
+  font-size: 0.9rem;
+}

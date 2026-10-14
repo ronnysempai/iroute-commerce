@@ -1,0 +1,22 @@
+<header class="topbar">
+  <div class="brand">
+    <span class="logo">iRoute</span>
+    <span class="brand-sub">Comercio</span>
+  </div>
+
+  <nav class="nav">
+    <a routerLink="/carga" routerLinkActive="active">Carga de CSV</a>
+    <a routerLink="/proceso" routerLinkActive="active">Procesar</a>
+    <a routerLink="/cuarentena" routerLinkActive="active">Cuarentena</a>
+  </nav>
+
+  <div class="user">
+    <span class="user-name">{{ username }}</span>
+    <span class="user-role">{{ role }}</span>
+    <button type="button" class="btn-logout" (click)="logout()">Salir</button>
+  </div>
+</header>
+
+<main class="content">
+  <router-outlet />
+</main>

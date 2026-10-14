@@ -1,0 +1,143 @@
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 55%, #2563eb 100%);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.login-brand {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.login-brand .logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  letter-spacing: -0.5px;
+}
+
+.login-brand .brand-sub {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.login-card h1 {
+  margin: 4px 0 0;
+  font-size: 1.35rem;
+  color: #0f172a;
+}
+
+.hint {
+  margin: 0 0 6px;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.field input {
+  padding: 11px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #0f172a;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18);
+}
+
+.password-row {
+  display: flex;
+  gap: 8px;
+}
+
+.password-row input {
+  flex: 1;
+}
+
+.btn-ghost {
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+  color: #334155;
+  border-radius: 10px;
+  padding: 0 12px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-ghost:hover {
+  background: #eef2f7;
+}
+
+.btn-primary {
+  margin-top: 6px;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 0.98rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.05s;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.btn-primary:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.error {
+  margin: 0;
+  padding: 10px 12px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+  border-radius: 10px;
+  font-size: 0.86rem;
+  font-weight: 500;
+}
+
+@media (max-width: 420px) {
+  .login-card {
+    padding: 22px;
+  }
+}

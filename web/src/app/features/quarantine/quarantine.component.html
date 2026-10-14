@@ -1,0 +1,50 @@
+<section class="page">
+  <header class="page-head">
+    <div>
+      <h1>Registros en cuarentena</h1>
+      <p>Registros rechazados durante el procesamiento, con el motivo del rechazo.</p>
+    </div>
+    <button type="button" class="btn-secondary" [disabled]="loading" (click)="load()">
+      {{ loading ? 'Actualizando…' : 'Actualizar' }}
+    </button>
+  </header>
+
+  <p class="error" *ngIf="error">{{ error }}</p>
+
+  <div class="card">
+    <div class="table-meta" *ngIf="!error">
+      <span class="pill">{{ records.length }} registros</span>
+    </div>
+
+    <p class="empty" *ngIf="!loading && !error && records.length === 0">
+      No hay registros en cuarentena.
+    </p>
+
+    <div class="table-wrap" *ngIf="records.length > 0">
+      <table>
+        <thead>
+          <tr>
+            <th>pc_id</th>
+            <th>pc_nomcomred</th>
+            <th>pc_numdoc</th>
+            <th>pc_tipdoc</th>
+            <th>pc_processdate</th>
+            <th>Motivo</th>
+            <th>Fecha cuarentena</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let record of records">
+            <td>{{ record.pcId }}</td>
+            <td>{{ record.pcNomcomred || '—' }}</td>
+            <td>{{ record.pcNumdoc || '—' }}</td>
+            <td>{{ record.pcTipdoc || '—' }}</td>
+            <td>{{ record.pcProcessdate }}</td>
+            <td><span class="badge">{{ record.motivo }}</span></td>
+            <td>{{ record.fechaCuarentena | date: 'yyyy-MM-dd HH:mm' }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

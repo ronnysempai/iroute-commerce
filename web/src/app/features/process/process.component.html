@@ -1,0 +1,33 @@
+<section class="page">
+  <header class="page-head">
+    <h1>Procesar registros por fecha</h1>
+    <p>
+      Valida los registros de la fecha seleccionada y mueve a cuarentena los que
+      tengan <code>pc_nomcomred</code> vacío o <code>pc_numdoc</code> inválido
+      (vacío, con letras o con caracteres especiales).
+    </p>
+  </header>
+
+  <div class="card">
+    <div class="form-row">
+      <label class="field">
+        <span>Fecha de proceso (pc_processdate)</span>
+        <input type="date" name="processDate" [(ngModel)]="processDate" />
+      </label>
+
+      <button type="button" class="btn-primary" [disabled]="loading" (click)="process()">
+        {{ loading ? 'Procesando…' : 'Procesar' }}
+      </button>
+    </div>
+
+    <p class="error" *ngIf="error">{{ error }}</p>
+
+    <div class="result" *ngIf="result">
+      <div class="result-count">
+        <span class="count">{{ result.registrosEnCuarentena }}</span>
+        <span class="count-label">registros enviados a cuarentena</span>
+      </div>
+      <p class="result-msg">{{ result.mensaje }}</p>
+    </div>
+  </div>
+</section>

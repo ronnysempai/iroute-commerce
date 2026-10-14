@@ -1,0 +1,52 @@
+<section class="page">
+  <header class="page-head">
+    <h1>Carga de archivo de comercio</h1>
+    <p>Selecciona un archivo <code>commerce_DDMMYYYY.csv</code> para previsualizarlo y cargarlo.</p>
+  </header>
+
+  <div class="card">
+    <label class="file-drop">
+      <input type="file" accept=".csv,text/csv" (change)="onFileSelected($event)" hidden />
+      <span class="file-icon">📄</span>
+      <span class="file-text">
+        {{ selectedFile ? selectedFile.name : 'Haz clic para elegir un archivo CSV' }}
+      </span>
+      <span class="file-size" *ngIf="selectedFile">
+        {{ selectedFile.size | number }} bytes
+      </span>
+    </label>
+
+    <p class="error" *ngIf="error">{{ error }}</p>
+
+    <div class="actions">
+      <button type="button" class="btn-primary" [disabled]="!selectedFile || loading" (click)="upload()">
+        {{ loading ? 'Cargando…' : 'Cargar registros' }}
+      </button>
+    </div>
+
+    <div class="success" *ngIf="result">
+      <strong>✔ {{ result.mensaje }}</strong>
+    </div>
+  </div>
+
+  <div class="card preview" *ngIf="preview && preview.headers.length">
+    <div class="preview-head">
+      <h2>Vista previa</h2>
+      <span class="pill">{{ preview.rows.length }} filas (máx. 50)</span>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th *ngFor="let header of preview.headers">{{ header }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of preview.rows">
+            <td *ngFor="let cell of row">{{ cell }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

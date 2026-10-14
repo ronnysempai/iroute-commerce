@@ -1,0 +1,8 @@
+pc_id,pc_nomcomred,pc_numdoc,pc_tipdoc,pc_direccion,pc_departamento,pc_provincia,pc_distrito,pc_telefono,pc_email,pc_processdate
+1,Comercial Uno S.A.C.,12345678,1,Av. Siempre Viva 123,Lima,Lima,Miraflores,987654321,uno@example.com,2026-10-13
+2,Bodega Doña Rosa,87654321,1,Calle Los Álamos 456,Lima,Lima,Surco,912345678,dos@example.com,2026-10-13
+3,,10203040,1,Jr. Sin Nombre 789,Lima,Lima,Barranco,999888777,tres@example.com,2026-10-13
+4,Tienda Cuatro,,1,Av. Vacía 000,Lima,Lima,San Isidro,955444333,cuatro@example.com,2026-10-13
+5,Distribuidora Cinco,12AB5678,1,Calle Letras 12,Lima,Lima,La Molina,933222111,cinco@example.com,2026-10-13
+6,Mayorista Seis,1234-5678,1,Av. Símbolos 99,Lima,Lima,Chorrillos,922111000,seis@example.com,2026-10-13
+7,Comercial Siete,55667788,1,Av. Válida 77,Cusco,Cusco,Cusco,911000999,siete@example.com,2026-10-13
